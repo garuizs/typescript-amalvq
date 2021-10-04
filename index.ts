@@ -1,6 +1,7 @@
 import {
   fluentTreeItem,
   fluentTreeView,
+  fluentCard,
   provideFluentDesignSystem,
 } from '@fluentui/web-components';
 import './style.css';
@@ -10,7 +11,8 @@ import './style.css';
  */
 export const FluentDesignSystem = provideFluentDesignSystem().register(
   fluentTreeItem(),
-  fluentTreeView()
+  fluentTreeView(),
+  fluentCard()
 );
 
 /**
@@ -19,14 +21,16 @@ export const FluentDesignSystem = provideFluentDesignSystem().register(
 let dragItem;
 
 /**
- * The tree view
+ * The tree views
  */
 const tree = document.getElementById('tree');
+const tree2 = document.getElementById('tree2');
 
 /**
- * The tree items
+ * The trees items
  */
 const items = Array.from(tree.querySelectorAll('fluent-tree-item'));
+const items2 = Array.from(tree2.querySelectorAll('fluent-tree-item'));
 
 /**
  * The drag start event
@@ -71,6 +75,26 @@ function handleDrop(e) {
  * Add our listeners for drag and drop
  */
 items.forEach((item) => {
+  // set the draggable attribute to true
+  item.setAttribute('draggable', 'true');
+  // add our dragstart event
+  item.addEventListener('dragstart', handleDragStart);
+  // add our dragover event to enable our drop
+  item.addEventListener('dragover', (e) => {
+    e.preventDefault();
+
+    return false;
+  });
+  // add our dragend event
+  item.addEventListener('dragend', handleDragEnd);
+  // add our drop event
+  item.addEventListener('drop', handleDrop);
+});
+
+/**
+ * Add our listeners for drag and drop
+ */
+items2.forEach((item) => {
   // set the draggable attribute to true
   item.setAttribute('draggable', 'true');
   // add our dragstart event
