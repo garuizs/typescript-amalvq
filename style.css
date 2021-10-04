@@ -1,0 +1,19 @@
+.container {
+  background-color: var(--fill-color);
+  color: var(--neutral-foreground-rest);
+  padding: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+fluent-tree-view {
+  width: 100%;
+}
+
+fluent-tree-item.dragging {
+  filter: grayscale();
+  opacity: 0.8;
+}
