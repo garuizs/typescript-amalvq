@@ -29,8 +29,8 @@ const tree2 = document.getElementById('tree2');
 /**
  * The trees items
  */
-const items = Array.from(tree.querySelectorAll('fluent-tree-item'));
-const items2 = Array.from(tree2.querySelectorAll('fluent-tree-item'));
+const items = Array.from(tree.querySelectorAll('fluent-card'));
+const items2 = Array.from(tree2.querySelectorAll('fluent-card'));
 
 /**
  * The drag start event
