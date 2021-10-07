@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 
+fluent-card {
+  margin-bottom: 8px;
+}
+
 fluent-card.dragging {
   filter: grayscale();
   opacity: 0.8;
@@ -17,4 +21,16 @@ fluent-card.dragging {
 .col {
   display: inline-block;
   vertical-align: top;
+  width: 100px;
+}
+
+#tree,
+#tree2 {
+  height: auto;
+}
+
+#drop-area-default1,
+#drop-area-default2 {
+  height: 8px;
+  background-color: azure;
 }
