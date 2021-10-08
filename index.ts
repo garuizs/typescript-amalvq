@@ -83,6 +83,7 @@ function handleDrop(e) {
     const items2 = Array.from(tree2.querySelectorAll('fluent-card'));
 
     const dropZonesHeight = getDropZonesHeight(items, items2, 8);
+    console.log(`${dropZonesHeight.height[0]},`);
     dropAreaDefault1.style.height = `${dropZonesHeight.height[0]}px`;
     dropAreaDefault2.style.height = `${dropZonesHeight.height[1]}px`;
   }
